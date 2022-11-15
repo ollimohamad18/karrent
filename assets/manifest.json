@@ -1,0 +1,27 @@
+{
+  "theme_color": "#ec0808",
+  "background_color": "#ec0808",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "KARRENT BY OL!",
+  "short_name": "KARRENT",
+  "description": "Perjalanan anda terganggu dengan bengkaknya biaya beli mobil?? Tenang, di KARRENT BY OL! kalian bisa rental mobil dengan biaya sewa yang cukup terjangkau untuk beberapa hari kedepan. Ayo, sewa sekarang juga!",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
