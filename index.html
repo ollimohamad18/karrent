@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="manifest" href="assets/manifest.json" />
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" />
+    <link rel="icon" href="assets/icon-192x192.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <title>KARRENT BY OL!</title>
+  </head>
+  <body>
+
+    
+    <div class="px-4 py-5 my-5 text-center">
+      <img src="assets/banner.png" sizes="50px" alt="KARRENT BY OL!">
+      <h1 class="display-5 fw-bold">KARRENT BY OL!</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Perjalanan anda terganggu dengan bengkaknya biaya beli mobil?? Tenang, di KARRENT BY OL! kalian bisa rental mobil dengan biaya sewa yang cukup terjangkau untuk beberapa hari kedepan. Ayo, sewa sekarang juga!</p>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <form id="form">
+                <div class="form-floating">
+                  <input type="hidden" name="id" id="id" />
+                  <input type="text" placeholder="Nama" class="form-control" name="name" id="name" required />
+                  <label for="">Nama</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                  <input type="number" placeholder="Umur" class="form-control" name="age" id="age" required />
+                  <label for="">Umur</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                  <textarea name="address" placeholder="Alamat" id="address" cols="30" rows="5" required class="form-control"></textarea>
+                  <label for="">Alamat</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                  <input type="text" placeholder="No Telp." class="form-control" id="phone" name="phone" required />
+                  <label for="">No Telpon</label>
+                </div>
+                <br>
+
+                <div class="form-floating">
+                  <select name="kategori" id="kategori" class="form-select" aria-label="Default select example">
+                    <option value="Avanza">Avanza</option>
+                    <option value="Xenia">Xenia</option>
+                    <option value="APV">APV</option>
+                    <option value="Innova">Innova</option>
+                    <option value="Elf Short 14 Seat">Elf Short 14 Seat</option>
+                    <option value="Elf Long 18 Seat">Elf Long 18 Seat</option>
+                    <option value="Hiace Commuter 14 Seat">Hiace Commuter 14 Seat</option>                  </select>
+                  <label for="">Mobil:</label>
+                </div>
+
+                <br>
+                <div class="form-floating">
+                  <input type="number" placeholder="Untuk sewa berapa hari?" onchange="hitungharga()" class="form-control" id="ukuran" name="ukuran" required />
+                  <label for="">Lama sewa</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                  <input type="text" placeholder="Harga otomatis keluar setelah menentukan kolom diatas" class="form-control" id="harga" name="harga" disabled />
+                  <label for="">Harga sewa</label>
+                </div>
+                <br>
+
+                <div class="d-grid gap-2 mx-auto">
+                  <button class="btn btn-primary" type="button" onclick="save()">Save</button>
+                  <button class="btn btn-danger" type="button" onclick="clearData()">Reset</button>
+                </div>
+
+                
+              </form>
+
+              
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="datatable" class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Nama</th>
+                      <th>Umur</th>
+                      <th>Alamat</th>
+                      <th>Telp</th>
+                      <th>Jenis</th>
+                      <th>Lama sewa</th>
+                      <th>Harga</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="table"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="function.js"></script>
+    <script>
+      allData();
+    </script>
+    <script>
+      function clearData() {
+        document.getElementById('form').reset();
+        document.getElementById('id').value = '';
+      }
+    </script>
+    <script src="assets/register.js"></script>
+  </body>
+</html>
